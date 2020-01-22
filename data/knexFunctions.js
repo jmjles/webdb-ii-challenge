@@ -1,4 +1,3 @@
-const connect = require('./knexfile')
-const db = connect('cars')
-
-exports.db = db
+const connect = require("./knexconfig");
+exports.db = db = connect("cars");
+exports.newCar = car => db.insert(car);
